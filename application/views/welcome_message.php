@@ -17,7 +17,14 @@
 	<div class="row mt-4">
 	<div class="col form-group">
 			<label>Kode Dokter</label>
-			<input type="text" name="kode_dokter" class="form-control">
+			<select name="kode_dokter" id="dokter"  class="form-control">
+				<option value="" Disabled selected>Pilih Dokter</option>
+				<?php 
+					foreach($dokter as $dokter) { ?>
+					<option value="<?=$dokter->Kode_Dokter?>"><?=$dokter->Nama_Dokter?></option>
+					<?php } ?>
+			</select>
+			<!-- <input type="text" name="kode_dokter" class="form-control"> -->
 		</div>
 		<div class=" col form-group">
 			<label>Tanggal</label>
@@ -54,6 +61,8 @@
 
 	</div>
 	</div>
+
+
 
 	<!-- <div class="container col-10 mt-3">
 		<table class="table table-bordered">

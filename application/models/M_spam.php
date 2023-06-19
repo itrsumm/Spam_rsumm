@@ -13,6 +13,13 @@
             $query = $this->db->query("DELETE FROM PENDAFTARAN WHERE Kode_Dokter='$kode_dokter' AND Tanggal='$tanggal' and No_MR between '$nomr1' and '$nomr2'");
             return $query;
         }
+        function get_dokter()
+        {
+            $query1 = $this->db->query("Select * from DOKTER where  Kode_Dokter in ('100','028')")->result();
+            $query2 = $this->db->query("Select * from DOKTER where  Jenis_Profesi='DOKTER SPESIALIS'")->result();
+            $query = array_merge($query1,$query2);
+            return $query;
+        }
         // function tampil_jurusan($user)
         function tampil_antrian($kode_dokter,$tanggal,$nomr1,$nomr2)
         {

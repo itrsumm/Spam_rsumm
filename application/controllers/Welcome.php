@@ -12,6 +12,7 @@ class Welcome extends CI_Controller {
     }
 	public function index()
 	{
+		$data['dokter']=$this->m_spam->get_dokter();
 		$data['content']='welcome_message';
 		$this->load->view('template',$data);
 	}
@@ -36,7 +37,7 @@ class Welcome extends CI_Controller {
 	public function edit(){
 		$data['content']='edit';
 	
-	
+		$data['dokter']=$this->m_spam->get_dokter();
 		$kode_dokter= $this->input->post('kode_dokter');
 		$tanggal= $this->input->post('tanggal');
 		$nomr1= $this->input->post('nomr1');

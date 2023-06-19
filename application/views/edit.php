@@ -50,7 +50,9 @@
 		</div>
 		</div>
 		<div class="">
+			<a href="index/" class="btn-sm btn-success">KEMBALI</a>
 	<button type="submit" onclick="return confirm('Yakin Hapus?')" class="btn-sm btn-primary">HAPUS</button>
+
 	</div>
 	</div>
 
