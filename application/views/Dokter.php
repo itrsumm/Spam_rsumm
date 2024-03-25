@@ -34,10 +34,10 @@
               <td><?=$dokter->Nama_Dokter?></td>
               <td><?=$dokter->Spesialis?></td>
               <td>
-                <?php if ($dokter->status=='aktif'){?>
-                    <span class="badge badge-success"><?=$dokter->status?></span>
+                <?php if ($dokter->status_aktif=='aktif'){?>
+                    <span class="badge badge-success"><?=$dokter->status_aktif?></span>
                 <?php } else { ?>
-                    <span class="badge badge-danger"><?=$dokter->status?></span>
+                    <span class="badge badge-danger"><?=$dokter->status_aktif?></span>
                 <?php } ?>
           
                 </td>
@@ -73,8 +73,8 @@
                                     <label>Status Aktif/Tidak </label>
                                    <select name="status" id="" class="form-control">
                                     <option value="">pilih</option>
-                                    <option value="aktif" <?= $dokter->status ==  'aktif' ? 'selected' : '' ?>>aktif</option>
-                                    <option value="nonaktif" <?= $dokter->status ==  'nonaktif' ? 'selected' : '' ?>>nonaktif</option>
+                                    <option value="aktif" <?= $dokter->status_aktif ==  'aktif' ? 'selected' : '' ?>>aktif</option>
+                                    <option value="nonaktif" <?= $dokter->status_aktif ==  'nonaktif' ? 'selected' : '' ?>>nonaktif</option>
                                    </select>
                                 </div>
                         </div>

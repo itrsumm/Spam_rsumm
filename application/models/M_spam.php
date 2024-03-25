@@ -35,7 +35,7 @@
 
         function update_dokter($params)
         {
-            $sql = "UPDATE DB_RSMM.dbo.Dokter SET status = ?
+            $sql = "UPDATE DB_RSMM.dbo.Dokter SET status_aktif = ?
             WHERE Kode_Dokter = ?";
             return $this->db->query($sql, $params);
     
