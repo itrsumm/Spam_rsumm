@@ -75,6 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
+	// 'hostname' => 'MSI\SQLEXPRESS',
 	'hostname' => '192.168.2.50',
 	'username' => 'admin',
 	'password' => '123',

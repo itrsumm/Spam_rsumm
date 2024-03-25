@@ -32,5 +32,13 @@
         //     $this->db->order_by('nama_jurusan', 'ASC');
         //     return $this->db->get($user);
         // }
+
+        function update_dokter($params)
+        {
+            $sql = "UPDATE DB_RSMM.dbo.Dokter SET status = ?
+            WHERE Kode_Dokter = ?";
+            return $this->db->query($sql, $params);
+    
+        } 
        
     }
